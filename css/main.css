@@ -1,0 +1,203 @@
+:root {
+    --dark: #132440;
+    --main-color: #3b1c32;
+    --sercondery-color: #6a1e55;
+    --third-color: #a64d79;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+    outline: none;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    margin: auto;
+}
+.main-title {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    font-weight: bolder;
+    margin-bottom: 1.7rem;
+    text-transform: uppercase;
+}
+/* Header */
+.header {
+    border-bottom: 0.001px solid #5e5f66;
+    padding: 20px;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.header .logo span {
+    background: linear-gradient(90deg, #ff6b6b, #845ef7);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .nav-link {
+    display: flex;
+    gap: 2rem;
+}
+.header .nav-link a {
+    color: #a0a6cc;
+    padding: 10px 15px;
+    border-radius: 7px;
+    transition:
+        background-color 300ms ease,
+        color 300ms ease;
+}
+.header .nav-link a:hover {
+    color: white;
+    background-color: #a0a6cc;
+}
+.nav-mode button {
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+}
+.nav-mode button:hover {
+    background-color: var(--third-color);
+}
+.nav-mode button i {
+    color: white;
+}
+
+/* Hero */
+.hero {
+    min-height: 90vh;
+    display: flex;
+}
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero .content {
+    max-width: 600px;
+}
+.hero .content .hero-title {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: -2px;
+}
+.hero .content .title span {
+    background: linear-gradient(90deg, #ff6b6b, #845ef7);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero .content p {
+    font-size: 1.3rem;
+    color: #a0a6cc;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+.hero .content button {
+    padding: 15px;
+    border-radius: 7px;
+    margin-right: 1rem;
+    background: linear-gradient(
+        80deg,
+        var(--sercondery-color),
+        var(--third-color)
+    );
+    color: white;
+    cursor: pointer;
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
+}
+.hero .content button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px 0px var(--third-color);
+}
+.hero img {
+    max-width: 400px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
+}
+.hero img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px 5px #a0a6cc;
+}
+
+/* About */
+.about {
+    min-height: 90vh;
+}
+.about .about-content {
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+.about .about-content .about-title {
+    color: white;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.about .about-content .about-parag {
+    color: #a0a6cc;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+.about .about-content .about-parag span {
+    background: linear-gradient(120deg, #ff6b6b, #845ef7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+.about .about-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.about .about-box .box {
+    background-color: #355872;
+    color: white;
+    padding: 25px;
+    border-radius: 7px;
+    flex: 1;
+    transition: transform 300ms ease;
+}
+.about .about-box .box:hover {
+    transform: scale(1.05);
+}
+.about .about-box .box i {
+    font-size: 2rem;
+}
+.about .about-box .box p {
+    color: #ddd;
+    font-size: 1.1rem;
+    margin-block: 1.2rem;
+}
+
+.about .about-box .box div {
+    font-weight: bold;
+    font-size: 1.1rem;
+}

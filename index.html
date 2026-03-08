@@ -38,13 +38,13 @@
             </div>
         </header>
         <main>
-            <section class="hero">
+            <section class="hero" id="home">
                 <div class="container">
                     <div class="content">
                         <h1 class="hero-title">
                             I'm <span>Mohamed Elbourkhissi</span>
                         </h1>
-                        <p>
+                        <p class="paragraph">
                             Full Stack, Software Engineer, AI Engineer Spain,
                             Vilafranca del Penedes.
                         </p>
@@ -59,12 +59,12 @@
                     <img src="assets/images/DJV MAR 1025-03.jpg" alt="" />
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
                     <div class="about-content">
                         <div class="main-title">about me</div>
-                        <h1 class="about-title">How I'm ?</h1>
-                        <p class="about-parag">
+                        <h1 class="title about-title">How I'm ?</h1>
+                        <p class="paragraph about-parag">
                             I'm a student of programming i started to program in
                             2023 i learn <span>HTML CSS JS</span>, Now i want to
                             practice my knoledge and help my family and the
@@ -88,6 +88,179 @@
                             <div>Spain, Vilafranca</div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section class="services" id="services">
+                <div class="container">
+                    <div class="main-title">services</div>
+                    <h1 class="title services-title">What I Offer</h1>
+                    <p class="paragraph services-paragraph">
+                        I offer a banch of services about programming and web
+                        development and also AI Engineer.
+                    </p>
+                    <div class="services-box">
+                        <div class="box">
+                            <img src="assets/icons/icons8-code-48.png" alt="" />
+                            <div class="content">
+                                <h3 class="box-title">Learning</h3>
+                                <p class="paragraph-box">
+                                    Full-stack development for web applications,
+                                    APIs, and tools built with modern tech
+                                    stacks and best practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img
+                                src="assets/icons/icons8-control-panel-48.png"
+                                alt=""
+                            />
+                            <div class="content">
+                                <h3 class="box-title">Learning</h3>
+                                <p class="paragraph-box">
+                                    Full-stack development for web applications,
+                                    APIs, and tools built with modern tech
+                                    stacks and best practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img
+                                src="assets/icons/icons8-module-48.png"
+                                alt=""
+                            />
+                            <div class="content">
+                                <h3 class="box-title">Learning</h3>
+                                <p class="paragraph-box">
+                                    Full-stack development for web applications,
+                                    APIs, and tools built with modern tech
+                                    stacks and best practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img
+                                src="assets/icons/icons8-program-48.png"
+                                alt=""
+                            />
+                            <div class="content">
+                                <h3 class="box-title">Learning</h3>
+                                <p class="paragraph-box">
+                                    Full-stack development for web applications,
+                                    APIs, and tools built with modern tech
+                                    stacks and best practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img
+                                src="assets/icons/icons8-push-pin-48.png"
+                                alt=""
+                            />
+                            <div class="content">
+                                <h3 class="box-title">Learning</h3>
+                                <p class="paragraph-box">
+                                    Full-stack development for web applications,
+                                    APIs, and tools built with modern tech
+                                    stacks and best practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img
+                                src="assets/icons/icons8-speed-48.png"
+                                alt=""
+                            />
+                            <div class="content">
+                                <h3 class="box-title">Learning</h3>
+                                <p class="paragraph-box">
+                                    Full-stack development for web applications,
+                                    APIs, and tools built with modern tech
+                                    stacks and best practices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="main-title">Contact</div>
+                    <h1 class="title">Contact With Me</h1>
+                    <p class="paragraph">
+                        Interested in any of my services? I'd love to hear from
+                        you. Fill out the form below and I'll get back to you as
+                        soon as possib
+                    </p>
+                    <form action="">
+                        <div class="row-form">
+                            <div class="frow">
+                                <label for="text">Name</label>
+                                <input
+                                    type="text"
+                                    id="text"
+                                    required
+                                    placeholder="Your full name"
+                                    name="name"
+                                />
+                            </div>
+                            <div class="srow">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    required
+                                    placeholder="example@email.com"
+                                    name="the email"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select name="countries" id="country">
+                                <option
+                                    value="Select your country"
+                                    selected
+                                    disabled
+                                >
+                                    Select your country
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Problem Category</label>
+                            <select name="category" id="category">
+                                <option
+                                    value="Select category"
+                                    disabled
+                                    selected
+                                >
+                                    Select category
+                                </option>
+                                <option value="">Training</option>
+                                <option value="">Software development</option>
+                                <option value="">IT Networking</option>
+                                <option value="">Operation systems</option>
+                                <option value="">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area">Question</label>
+                            <textarea
+                                name="subject"
+                                id="area"
+                                placeholder="Whats your challenge?"
+                            ></textarea>
+                        </div>
+
+                        <button class="submit" id="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send
+                        </button>
+                    </form>
                 </div>
             </section>
         </main>

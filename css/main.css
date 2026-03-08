@@ -1,8 +1,13 @@
 :root {
-    --dark: #132440;
+    --dark: #001330;
     --main-color: #3b1c32;
     --sercondery-color: #6a1e55;
     --third-color: #a64d79;
+    --paragraph: #a0a6cc;
+    --transition: 300ms;
+}
+html {
+    scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
@@ -37,10 +42,21 @@ button {
 }
 /* Header */
 .header {
-    border-bottom: 0.001px solid #5e5f66;
-    padding: 20px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #132440;
+    overflow: hidden;
+    box-shadow: 0 0 5px #807d7d;
+    padding: 35px;
 }
 .header .container {
+    position: fixed;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,23 +77,23 @@ button {
     gap: 2rem;
 }
 .header .nav-link a {
-    color: #a0a6cc;
+    color: var(--paragraph);
     padding: 10px 15px;
     border-radius: 7px;
     transition:
-        background-color 300ms ease,
-        color 300ms ease;
+        background-color var(--transition) ease,
+        color var(--transition) ease;
 }
 .header .nav-link a:hover {
     color: white;
-    background-color: #a0a6cc;
+    background-color: var(--paragraph);
 }
 .nav-mode button {
     background-color: var(--main-color);
     padding: 10px;
     border-radius: 7px;
     cursor: pointer;
-    transition: background-color 250ms ease;
+    transition: background-color var(--transition) ease;
 }
 .nav-mode button:hover {
     background-color: var(--third-color);
@@ -88,7 +104,7 @@ button {
 
 /* Hero */
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
 }
 .hero .container {
@@ -99,21 +115,22 @@ button {
 .hero .content {
     max-width: 600px;
 }
-.hero .content .hero-title {
+.hero-title {
     color: white;
     font-size: 3rem;
     letter-spacing: -2px;
 }
-.hero .content .title span {
+.hero .content .hero-title span {
     background: linear-gradient(90deg, #ff6b6b, #845ef7);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.hero .content p {
-    font-size: 1.3rem;
-    color: #a0a6cc;
-    margin-bottom: 1.5rem;
+.paragraph {
+    font-size: 1.2rem;
+    color: var(--paragraph);
+    margin-bottom: 5rem;
     line-height: 1.4;
+    max-width: 600px;
 }
 .hero .content button {
     padding: 15px;
@@ -127,11 +144,11 @@ button {
     color: white;
     cursor: pointer;
     transition:
-        transform 300ms ease,
-        box-shadow 300ms ease;
+        transform var(--transition) ease,
+        box-shadow var(--transition) ease;
 }
 .hero .content button:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     box-shadow: 0 0 10px 0px var(--third-color);
 }
 .hero img {
@@ -139,12 +156,12 @@ button {
     border-radius: 50%;
     cursor: pointer;
     transition:
-        transform 300ms ease,
-        box-shadow 300ms ease;
+        transform var(--transition) ease,
+        box-shadow var(--transition) ease;
 }
 .hero img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 5px 5px #a0a6cc;
+    transform: scale(1.02);
+    box-shadow: 0 0 5px 5px var(--paragraph);
 }
 
 /* About */
@@ -155,13 +172,13 @@ button {
     max-width: 600px;
     margin-bottom: 2rem;
 }
-.about .about-content .about-title {
+.title {
     color: white;
     font-weight: bolder;
     font-size: 2.5rem;
 }
 .about .about-content .about-parag {
-    color: #a0a6cc;
+    color: var(--paragraph);
     font-size: 1.2rem;
     line-height: 1.4;
 }
@@ -173,23 +190,29 @@ button {
     font-weight: bold;
 }
 .about .about-box {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
 }
 .about .about-box .box {
-    background-color: #355872;
+    background-color: #213352;
     color: white;
     padding: 25px;
     border-radius: 7px;
-    flex: 1;
-    transition: transform 300ms ease;
+    transition: all var(--transition) ease;
+    outline: 2px solid transparent;
 }
 .about .about-box .box:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #a07331;
+    outline: 2px solid #ff9800;
 }
 .about .about-box .box i {
     font-size: 2rem;
+    transition: color var(--transition) ease;
+}
+.about .about-box .box:hover i {
+    color: #ff9800;
 }
 .about .about-box .box p {
     color: #ddd;
@@ -200,4 +223,118 @@ button {
 .about .about-box .box div {
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+/* Services */
+.services {
+    min-height: 90vh;
+    margin-bottom: 5rem;
+}
+.services .services-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.services .services-box .box {
+    background-color: #213352;
+    padding: 35px;
+    border-radius: 7px;
+    border-bottom: 5px solid transparent;
+    transition: all var(--transition) ease;
+}
+.services .services-box .box:hover {
+    transform: scale(1.02) translateX(-5px);
+}
+.services .services-box .box:nth-child(1):hover {
+    box-shadow: 5px 5px 5px #e91e63;
+}
+.services .services-box .box:nth-child(2):hover {
+    box-shadow: 5px 5px 5px #3f51b5;
+}
+.services .services-box .box:nth-child(3):hover {
+    box-shadow: 5px 5px 5px #cddc39;
+}
+.services .services-box .box:nth-child(4):hover {
+    box-shadow: 5px 5px 5px #00bcd4;
+}
+.services .services-box .box:nth-child(5):hover {
+    box-shadow: 5px 5px 5px #ff5722;
+}
+.services .services-box .box:nth-child(6):hover {
+    box-shadow: 5px 5px 5px #9c27b0;
+}
+.services .services-box .content .box-title {
+    color: white;
+    margin-block: 1rem;
+}
+.services .services-box .content .paragraph-box {
+    color: var(--paragraph);
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+/* Contact */
+.contact {
+    min-height: 90vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    gap: 1.2rem;
+    text-align: left;
+}
+form .row-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+}
+.frow,
+.srow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+form input,
+form textarea {
+    border: none;
+    outline: none;
+}
+
+form #text,
+form #email,
+form select,
+form textarea {
+    padding: 15px;
+    background-color: #151f49;
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    color: white;
+}
+form textarea {
+    resize: none;
+    height: 12rem;
+}
+form label {
+    color: white;
+    font-weight: bold;
+}
+
+form #submit {
+    padding: 11px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: #ff5722;
+}
+form #submit i {
+    margin-right: 7px;
 }

@@ -132,7 +132,8 @@ button {
     line-height: 1.4;
     max-width: 600px;
 }
-.hero .content button {
+.hero .content a {
+    display: inline-block;
     padding: 15px;
     border-radius: 7px;
     margin-right: 1rem;
@@ -143,25 +144,21 @@ button {
     );
     color: white;
     cursor: pointer;
-    transition:
-        transform var(--transition) ease,
-        box-shadow var(--transition) ease;
+    transition: all var(--transition) ease;
 }
-.hero .content button:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 10px 0px var(--third-color);
+.hero .content a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 20px -2px var(--third-color);
 }
 .hero img {
     max-width: 400px;
     border-radius: 50%;
     cursor: pointer;
-    transition:
-        transform var(--transition) ease,
-        box-shadow var(--transition) ease;
+    transition: all var(--transition) ease;
 }
 .hero img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 5px 5px var(--paragraph);
+    transform: scale(1.01);
+    box-shadow: 0px 0px 20px -2px var(--paragraph);
 }
 
 /* About */
@@ -243,25 +240,25 @@ button {
     transition: all var(--transition) ease;
 }
 .services .services-box .box:hover {
-    transform: scale(1.02) translateX(-5px);
+    transform: translateX(-5px);
 }
 .services .services-box .box:nth-child(1):hover {
-    box-shadow: 5px 5px 5px #e91e63;
+    box-shadow: 5px 5px 0 #e91e63;
 }
 .services .services-box .box:nth-child(2):hover {
-    box-shadow: 5px 5px 5px #3f51b5;
+    box-shadow: 5px 5px 0 #3f51b5;
 }
 .services .services-box .box:nth-child(3):hover {
-    box-shadow: 5px 5px 5px #cddc39;
+    box-shadow: 5px 5px 0 #cddc39;
 }
 .services .services-box .box:nth-child(4):hover {
-    box-shadow: 5px 5px 5px #00bcd4;
+    box-shadow: 5px 5px 0 #00bcd4;
 }
 .services .services-box .box:nth-child(5):hover {
-    box-shadow: 5px 5px 5px #ff5722;
+    box-shadow: 5px 5px 0 #ff5722;
 }
 .services .services-box .box:nth-child(6):hover {
-    box-shadow: 5px 5px 5px #9c27b0;
+    box-shadow: 5px 5px 0 #9c27b0;
 }
 .services .services-box .content .box-title {
     color: white;
@@ -274,8 +271,10 @@ button {
 }
 
 /* Contact */
+
 .contact {
     min-height: 90vh;
+    margin-bottom: 5rem;
 }
 form {
     display: flex;
@@ -306,6 +305,17 @@ form textarea {
     border: none;
     outline: none;
 }
+form input,
+form textarea,
+form select {
+    outline: 1px solid transparent;
+    transition: all var(--transition) ease;
+}
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: 1px solid#ff9800;
+}
 
 form #text,
 form #email,
@@ -322,19 +332,68 @@ form textarea {
     resize: none;
     height: 12rem;
 }
+
 form label {
     color: white;
     font-weight: bold;
 }
 
-form #submit {
+form .submit {
     padding: 11px;
     border-radius: 7px;
     cursor: pointer;
-    color: white;
+    /* color: b; */
     font-weight: bold;
-    background-color: #ff5722;
+    background-color: #f76913;
+    transition: all var(--transition) ease;
+    box-shadow: 0 0 15px -4px #ff5722;
 }
-form #submit i {
+form .submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px -4px #ff5722;
+}
+form .submit i {
     margin-right: 7px;
+}
+
+/* Footer */
+.footer {
+    background-color: #213352;
+}
+.footer .footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 25px;
+}
+.footer .footer-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5rem;
+}
+.footer .footer-link h4 {
+    color: white;
+}
+.footer .footer-link a {
+    color: var(--paragraph);
+}
+.footer .footer-link a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+.footer .social-icons i {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all var(--transition) ease;
+}
+.footer .social-icons i:hover {
+    color: tomato;
+}
+.footer .copyRight p {
+    color: white;
 }

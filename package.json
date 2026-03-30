@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  },
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./css/main.css -o ./dist/output.css",
+    "watch": "npx @tailwindcss/cli -i ./css/main.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.6.14"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  }
+}

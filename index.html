@@ -1,14 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Full Stack Developer portfolio" />
         <!-- CSS FILES -->
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="dist/output.css" />
         <link rel="stylesheet" href="css/all.min.css" />
         <!-- cdn Font Awesome -->
+        <!-- Tailwind File -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -23,171 +25,289 @@
             type="image/x-icon"
         />
     </head>
-    <body>
-        <header class="header">
-            <div class="container">
+
+    <body class="bg-gray-900 font-sans text-white">
+        <header
+            class="header fixed top-0 z-10 w-full overflow-hidden bg-gray-700 p-5"
+        >
+            <div
+                class="container m-auto flex w-full max-w-300 items-center justify-between px-5 max-sm:m-auto max-sm:justify-baseline max-sm:px-0"
+            >
                 <img
-                    class="logo"
+                    class="logo max-w-14 cursor-pointer rounded-full bg-linear-90 from-amber-700 to-cyan-700 p-2 transition-colors duration-200 ease-linear hover:bg-cyan-800 max-sm:hidden"
                     src="assets/icons/sketch.svg"
                     alt="Logo de Mohamed"
                 />
-                <nav class="nav-link showHide" id="link">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
+                <nav
+                    class="nav-link showHide flex gap-10 max-sm:justify-start max-sm:gap-2"
+                    id="link"
+                >
+                    <a class="btn" href="#home">Home</a>
+                    <a class="btn" href="#about">About</a>
+                    <a class="btn" href="#services">Services</a>
+                    <a class="btn" href="#contact">Contact</a>
                 </nav>
-                <div class="btns">
+                <div class="btns flex items-center gap-4">
                     <div class="nav-mode">
-                        <button><i class="fa-solid fa-moon"></i></button>
+                        <button>
+                            <i
+                                class="fa-solid fa-moon text-2x cursor-pointer text-2xl max-sm:text-[1.2rem]"
+                            ></i>
+                        </button>
                     </div>
                     <button class="list-btn" id="list-links">
-                        <i class="fa-solid fa-list"></i>
+                        <i
+                            class="fa-solid fa-list cursor-pointer text-2xl max-sm:text-[1.3rem]"
+                        ></i>
                     </button>
                 </div>
             </div>
         </header>
         <main>
-            <section class="hero" id="home">
-                <div class="container">
-                    <div class="content">
-                        <h1 class="hero-title">
-                            I'm <span>Mohamed Elbourkhissi</span>
+            <section class="hero flex min-h-[90vh]" id="home">
+                <div
+                    class="px-5max-sm:flex-col container m-auto flex w-full max-w-300 items-center justify-between max-sm:text-center"
+                >
+                    <div class="content max-w-200">
+                        <h1
+                            class="hero-title mb-5 text-5xl font-bold text-white max-sm:text-4xl"
+                        >
+                            I'm <br />
+                            <span
+                                class="bg-linear-to-r from-[#ff6b6b] to-[#845ef7] bg-clip-text text-5xl text-transparent max-sm:text-4xl"
+                                >Mohamed Elbourkhissi</span
+                            >
                         </h1>
-                        <p class="paragraph">
+                        <p
+                            class="paragraph mb-20 max-w-150 text-[1.2rem]/relaxed text-gray-400 max-sm:text-[1rem]"
+                        >
                             Full Stack, Software Engineer, AI Engineer Spain,
                             Vilafranca del Penedes.
                         </p>
-                        <a class="projects" href="#services">
+                        <a
+                            class="projects mr-4 rounded-[7px] bg-linear-to-tl from-[#ff6b6b] to-[#845ef7] p-4 transition-all duration-500 ease-linear hover:bg-linear-to-bl"
+                            href="#services"
+                        >
                             <i class="fa-solid fa-folder-tree"></i> View
                             Projects
                         </a>
                         <a
-                            class="git"
+                            class="git mr-4 rounded-[7px] bg-linear-to-tl from-[#ff6b6b] to-[#845ef7] p-4 transition-all duration-500 ease-linear hover:bg-linear-to-bl"
                             href="https://github.com/mohameddev100?tab=repositories"
                             target="_blank"
                         >
                             <i class="fa-brands fa-github"></i> Github
                         </a>
                     </div>
-                    <img src="assets/images/DJV MAR 1025-03.jpg" alt="" />
+                    <img
+                        class="max-w-[24rem] cursor-pointer rounded-full transition-colors hover:shadow-xl/30 max-sm:hidden"
+                        src="assets/images/DJV MAR 1025-03.jpg"
+                        alt=""
+                    />
                 </div>
             </section>
-            <section class="about" id="about">
-                <div class="container">
-                    <div class="about-content">
-                        <div class="main-title">about me</div>
-                        <h1 class="title about-title">How am i ?</h1>
-                        <p class="paragraph about-parag">
+            <section class="about min-h-[90vh] py-20" id="about">
+                <div class="container m-auto w-full max-w-300 px-5">
+                    <div class="about-content mb-8 max-w-[600px]">
+                        <div
+                            class="main-title m mb-2 text-2xl font-bold text-orange-600"
+                        >
+                            about me
+                        </div>
+                        <h1
+                            class="title about-title mb-4 text-4xl font-black text-white md:text-[2.5rem]"
+                        >
+                            How am i ?
+                        </h1>
+                        <p
+                            class="paragraph about-parag mb-12 text-[1.2rem] leading-[1.4] text-gray-400 md:mb-8"
+                        >
                             I'm a student of programming i started to program in
-                            2023 i learn <span>HTML CSS JS</span>, Now i want to
-                            practice my knoledge and help my family and the
-                            community to go up.
+                            2023 i learn
+                            <span
+                                class="bg-linear-120 from-[#ff6b6b] to-[#845ef7] bg-clip-text font-bold text-transparent"
+                                >HTML CSS JS</span
+                            >, Now i want to practice my knoledge and help my
+                            family and the community to go up.
                         </p>
                     </div>
-                    <div class="about-box">
-                        <div class="box">
-                            <i class="fa-regular fa-address-card"></i>
-                            <p>based in</p>
-                            <div>Spain, Vilafranca</div>
+                    <div
+                        class="about-box grid grid-cols-1 gap-8 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]"
+                    >
+                        <div
+                            class="box group rounded-[7px] bg-[#213352] p-[25px] outline-2 outline-transparent transition-all duration-300 ease-linear hover:scale-101 hover:shadow-[0_0_15px_#a07331] hover:outline-[#ff6b6b]"
+                        >
+                            <i
+                                class="fa-regular fa-address-card text-[2rem] transition-colors duration-300 ease-linear group-hover:text-[#ff6b6b]"
+                            ></i>
+                            <p class="my-[1.2rem] text-[1.1rem] text-[#ddd]">
+                                based in
+                            </p>
+                            <div class="text-[1.1rem] font-bold">
+                                Spain, Vilafranca
+                            </div>
                         </div>
-                        <div class="box">
-                            <i class="fa-solid fa-award"></i>
-                            <p>Title</p>
-                            <div>Full Stack dev</div>
+                        <div
+                            class="box group rounded-[7px] bg-[#213352] p-[25px] text-white outline-2 outline-transparent transition-all duration-300 ease-linear hover:scale-102 hover:shadow-[0_0_15px_#a07331] hover:outline-[#ff6b6b]"
+                        >
+                            <i
+                                class="fa-solid fa-award text-[2rem] transition-colors duration-300 ease-linear group-hover:text-[#ff6b6b]"
+                            ></i>
+                            <p class="my-[1.2rem] text-[1.1rem] text-[#ddd]">
+                                Title
+                            </p>
+                            <div class="text-[1.1rem] font-bold">
+                                Full Stack dev
+                            </div>
                         </div>
-                        <div class="box">
-                            <i class="fa-solid fa-battery-half"></i>
-                            <p>Studies</p>
-                            <div>I study IT, Eugeni D'ors</div>
+                        <div
+                            class="box group rounded-[7px] bg-[#213352] p-[25px] text-white outline-2 outline-transparent transition-all duration-300 ease-linear hover:scale-102 hover:shadow-[0_0_15px_#a07331] hover:outline-[#ff6b6b]"
+                        >
+                            <i
+                                class="fa-solid fa-battery-half text-[2rem] transition-colors duration-300 ease-linear group-hover:text-[#ff6b6b]"
+                            ></i>
+                            <p class="my-[1.2rem] text-[1.1rem] text-[#ddd]">
+                                Studies
+                            </p>
+                            <div class="text-[1.1rem] font-bold">
+                                I study IT, Eugeni D'ors
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="services" id="services">
-                <div class="container">
-                    <div class="main-title">services</div>
-                    <h1 class="title services-title">What I Offer</h1>
-                    <p class="paragraph services-paragraph">
+            <section class="services mb-20 min-h-[90vh] py-20" id="services">
+                <div class="container m-auto w-full max-w-300 px-5">
+                    <div
+                        class="main-title m text-2xl font-bold text-orange-600"
+                    >
+                        services
+                    </div>
+                    <h1
+                        class="title services-title mb-4 text-4xl font-black text-white md:text-[2.5rem]"
+                    >
+                        What I Offer
+                    </h1>
+                    <p
+                        class="paragraph services-paragraph mb-12 text-[1.2rem] leading-[1.4] text-gray-400"
+                    >
                         I offer a banch of services about programming and web
                         development and also AI Engineer.
                     </p>
-                    <div class="services-box">
-                        <div class="box">
+                    <div
+                        class="services-box grid grid-cols-1 gap-4 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]"
+                    >
+                        <div
+                            class="box rounded-[7px] border-b-5 border-transparent bg-[#213352] p-[35px] transition-all duration-300 ease-linear hover:-translate-x-1.5 hover:shadow-[5px_5px_0_#e91e63]"
+                        >
                             <img src="assets/icons/icons8-code-48.png" alt="" />
                             <div class="content">
-                                <h3 class="box-title">Learning</h3>
-                                <p class="paragraph-box">
+                                <h3 class="box-title my-4 font-bold text-white">
+                                    Learning
+                                </h3>
+                                <p
+                                    class="paragraph-box text-base leading-[1.4] text-gray-400"
+                                >
                                     Full-stack development for web applications,
                                     APIs, and tools built with modern tech
                                     stacks and best practices.
                                 </p>
                             </div>
                         </div>
-                        <div class="box">
+                        <div
+                            class="box rounded-[7px] border-b-5 border-transparent bg-[#213352] p-[35px] transition-all duration-300 ease-linear hover:-translate-x-1.5 hover:shadow-[5px_5px_0_#3f51b5]"
+                        >
                             <img
                                 src="assets/icons/icons8-control-panel-48.png"
                                 alt=""
                             />
                             <div class="content">
-                                <h3 class="box-title">Learning</h3>
-                                <p class="paragraph-box">
+                                <h3 class="box-title my-4 font-bold text-white">
+                                    Learning
+                                </h3>
+                                <p
+                                    class="paragraph-box text-base leading-[1.4] text-gray-400"
+                                >
                                     Full-stack development for web applications,
                                     APIs, and tools built with modern tech
                                     stacks and best practices.
                                 </p>
                             </div>
                         </div>
-                        <div class="box">
+                        <div
+                            class="box rounded-[7px] border-b-5 border-transparent bg-[#213352] p-[35px] transition-all duration-300 ease-linear hover:-translate-x-1.5 hover:shadow-[5px_5px_0_#cddc39]"
+                        >
                             <img
                                 src="assets/icons/icons8-module-48.png"
                                 alt=""
                             />
                             <div class="content">
-                                <h3 class="box-title">Learning</h3>
-                                <p class="paragraph-box">
+                                <h3 class="box-title my-4 font-bold text-white">
+                                    Learning
+                                </h3>
+                                <p
+                                    class="paragraph-box text-base leading-[1.4] text-gray-400"
+                                >
                                     Full-stack development for web applications,
                                     APIs, and tools built with modern tech
                                     stacks and best practices.
                                 </p>
                             </div>
                         </div>
-                        <div class="box">
+                        <div
+                            class="box rounded-[7px] border-b-5 border-transparent bg-[#213352] p-[35px] transition-all duration-300 ease-linear hover:-translate-x-1.5 hover:shadow-[5px_5px_0_#00bcd4]"
+                        >
                             <img
                                 src="assets/icons/icons8-program-48.png"
                                 alt=""
                             />
                             <div class="content">
-                                <h3 class="box-title">Learning</h3>
-                                <p class="paragraph-box">
+                                <h3 class="box-title my-4 font-bold text-white">
+                                    Learning
+                                </h3>
+                                <p
+                                    class="paragraph-box text-base leading-[1.4] text-gray-400"
+                                >
                                     Full-stack development for web applications,
                                     APIs, and tools built with modern tech
                                     stacks and best practices.
                                 </p>
                             </div>
                         </div>
-                        <div class="box">
+                        <div
+                            class="box rounded-[7px] border-b-5 border-transparent bg-[#213352] p-[35px] transition-all duration-300 ease-linear hover:-translate-x-1.5 hover:shadow-[5px_5px_0_#ff5722]"
+                        >
                             <img
                                 src="assets/icons/icons8-push-pin-48.png"
                                 alt=""
                             />
                             <div class="content">
-                                <h3 class="box-title">Learning</h3>
-                                <p class="paragraph-box">
+                                <h3 class="box-title my-4 font-bold text-white">
+                                    Learning
+                                </h3>
+                                <p
+                                    class="paragraph-box text-base leading-[1.4] text-gray-400"
+                                >
                                     Full-stack development for web applications,
                                     APIs, and tools built with modern tech
                                     stacks and best practices.
                                 </p>
                             </div>
                         </div>
-                        <div class="box">
+                        <div
+                            class="box rounded-[7px] border-b-5 border-transparent bg-[#213352] p-[35px] transition-all duration-300 ease-linear hover:-translate-x-1.5 hover:shadow-[5px_5px_0_#9c27b0]"
+                        >
                             <img
                                 src="assets/icons/icons8-speed-48.png"
                                 alt=""
                             />
                             <div class="content">
-                                <h3 class="box-title">Learning</h3>
-                                <p class="paragraph-box">
+                                <h3 class="box-title my-4 font-bold text-white">
+                                    Learning
+                                </h3>
+                                <p
+                                    class="paragraph-box text-base leading-[1.4] text-gray-400"
+                                >
                                     Full-stack development for web applications,
                                     APIs, and tools built with modern tech
                                     stacks and best practices.
@@ -197,20 +317,38 @@
                     </div>
                 </div>
             </section>
-            <section class="contact" id="contact">
-                <div class="container">
-                    <div class="main-title">Contact</div>
-                    <h1 class="title">Contact With Me</h1>
-                    <p class="paragraph">
+            <section class="contact mb-20 min-h-[90vh] py-20" id="contact">
+                <div class="container m-auto w-full max-w-300 px-5">
+                    <div
+                        class="main-title mb-5 text-2xl font-bold text-orange-600"
+                    >
+                        Contact
+                    </div>
+                    <h1
+                        class="title mb-4 text-4xl font-black text-white md:text-[2.5rem]"
+                    >
+                        Contact With Me
+                    </h1>
+                    <p
+                        class="paragraph mb-12 text-[1.2rem] leading-[1.4] text-gray-400"
+                    >
                         Interested in any of my services? I'd love to hear from
                         you. Fill out the form below and I'll get back to you as
                         soon as possib
                     </p>
-                    <form action="">
-                        <div class="row-form">
-                            <div class="frow">
-                                <label for="text">Name</label>
+                    <form
+                        class="m-auto flex max-w-[600px] flex-col gap-[1.2rem] text-left"
+                        action=""
+                    >
+                        <div
+                            class="row-form grid grid-cols-1 gap-[1.4rem] md:grid-cols-2"
+                        >
+                            <div class="frow flex flex-col gap-[0.4rem]">
+                                <label class="font-bold text-white" for="text"
+                                    >Name</label
+                                >
                                 <input
+                                    class="rounded-[7px] border border-transparent bg-[#151f49] p-[15px] text-white outline-1 outline-transparent transition-all duration-300 focus:outline-[#ff9800]"
                                     type="text"
                                     id="text"
                                     required
@@ -218,9 +356,12 @@
                                     name="name"
                                 />
                             </div>
-                            <div class="srow">
-                                <label for="email">Email</label>
+                            <div class="srow flex flex-col gap-[0.4rem]">
+                                <label class="font-bold text-white" for="email"
+                                    >Email</label
+                                >
                                 <input
+                                    class="rounded-[7px] border border-transparent bg-[#151f49] p-[15px] text-white outline-1 outline-transparent transition-all duration-300 focus:outline-[#ff9800]"
                                     type="email"
                                     id="email"
                                     required
@@ -230,9 +371,15 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="country">Country</label>
-                            <select name="countries" id="country">
+                        <div class="form-group flex flex-col gap-[0.4rem]">
+                            <label class="font-bold text-white" for="country"
+                                >Country</label
+                            >
+                            <select
+                                class="rounded-[7px] border border-transparent bg-[#151f49] p-[15px] text-white outline-1 outline-transparent transition-all duration-300 focus:outline-[#ff9800]"
+                                name="countries"
+                                id="country"
+                            >
                                 <option
                                     value="Select your country"
                                     selected
@@ -243,9 +390,15 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="category">Problem Category</label>
-                            <select name="category" id="category">
+                        <div class="form-group flex flex-col gap-[0.4rem]">
+                            <label class="font-bold text-white" for="category"
+                                >Problem Category</label
+                            >
+                            <select
+                                class="rounded-[7px] border border-transparent bg-[#151f49] p-[15px] text-white outline-1 outline-transparent transition-all duration-300 focus:outline-[#ff9800]"
+                                name="category"
+                                id="category"
+                            >
                                 <option
                                     value="Select category"
                                     disabled
@@ -267,76 +420,269 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="area">Question</label>
+                        <div class="form-group flex flex-col gap-[0.4rem]">
+                            <label class="font-bold text-white" for="area"
+                                >Question</label
+                            >
                             <textarea
+                                class="h-[12rem] resize-none rounded-[7px] border border-transparent bg-[#151f49] p-[15px] text-white outline-1 outline-transparent transition-all duration-300 focus:outline-[#ff9800]"
                                 name="subject"
                                 id="area"
                                 placeholder="Whats your challenge?"
                             ></textarea>
                         </div>
 
-                        <button type="submit" class="submit" id="submit">
-                            <i class="fa-solid fa-paper-plane"></i>
+                        <button
+                            type="submit"
+                            class="submit cursor-pointer rounded-[7px] bg-[#f76913] p-[11px] font-bold text-white shadow-[0_0_15px_-4px_#ff5722] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_-4px_#ff5722]"
+                            id="submit"
+                        >
+                            <i class="fa-solid fa-paper-plane mr-[7px]"></i>
                             Send
                         </button>
                     </form>
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <ul class="footer-link">
-                        <h4 class="footer-title">Services</h4>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Hosting</a></li>
-                        <li><a href="#">Careers </a></li>
-                        <li><a href="#">Careers </a></li>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
+        <footer class="footer bg-[#213352] py-8">
+            <div class="container m-auto w-full max-w-300 px-5">
+                <div
+                    class="footer-content grid grid-cols-1 p-[25px] md:grid-cols-4"
+                >
+                    <ul class="footer-link mb-20 flex flex-col gap-[10px]">
+                        <h4 class="footer-title font-bold text-white">
+                            Services
+                        </h4>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Web design</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Development</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Hosting</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Web design</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Development</a
+                            >
+                        </li>
                     </ul>
-                    <ul class="footer-link">
-                        <h4 class="footer-title">About</h4>
-                        <li><a href="#">Company</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Job openings</a></li>
-                        <li><a href="#">Employee success</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Company</a></li>
+                    <ul class="footer-link mb-20 flex flex-col gap-[10px]">
+                        <h4 class="footer-title font-bold text-white">About</h4>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Company</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Careers</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Team</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Job openings</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Employee success</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Team</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Company</a
+                            >
+                        </li>
                     </ul>
-                    <ul class="footer-link">
-                        <h4 class="footer-title">Company Name</h4>
+                    <ul class="footer-link mb-20 flex flex-col gap-[10px]">
+                        <h4 class="footer-title font-bold text-white">
+                            Company Name
+                        </h4>
 
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Legacy</a></li>
-                        <li><a href="#">Privacy Policy </a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Legacy</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Privacy Policy </a></li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Legacy</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Terms</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Legacy</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Privacy Policy
+                            </a>
+                        </li>
                     </ul>
-                    <ul class="footer-link">
-                        <h4 class="footer-title">Find us</h4>
-                        <li><a href="#">Image Cropping</a></li>
-                        <li><a href="#">Hair</a></li>
-                        <li><a href="#">Logo Design</a></li>
-                        <li><a href="#">Reflection</a></li>
-                        <li><a href="#">Shadows & Mirror</a></li>
-                        <li><a href="#">Remove Background</a></li>
-                        <li><a href="#">Hollow Man</a></li>
+                    <ul class="footer-link mb-20 flex flex-col gap-[10px]">
+                        <h4 class="footer-title font-bold text-white">
+                            Find us
+                        </h4>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Image Cropping</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Hair</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Logo Design</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Reflection</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Shadows & Mirror</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Remove Background</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block w-fit text-gray-400 hover:underline"
+                                href="#"
+                                >Hollow Man</a
+                            >
+                        </li>
                     </ul>
                     <div class="copyRight">
-                        <p>© Fonticons, Inc.</p>
+                        <p class="text-white">© Fonticons, Inc.</p>
                     </div>
-                    <div class="social-icons">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-square-instagram"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-telegram"></i>
-                        <i class="fa-brands fa-square-x-twitter"></i>
+                    <div class="social-icons flex justify-end gap-[10px]">
+                        <i
+                            class="fa-brands fa-facebook hover:text-tomato cursor-pointer text-[1.5rem] text-white transition-all duration-300"
+                        ></i>
+                        <i
+                            class="fa-brands fa-square-instagram hover:text-tomato cursor-pointer text-[1.5rem] text-white transition-all duration-300"
+                        ></i>
+                        <i
+                            class="fa-brands fa-linkedin hover:text-tomato cursor-pointer text-[1.5rem] text-white transition-all duration-300"
+                        ></i>
+                        <i
+                            class="fa-brands fa-telegram hover:text-tomato cursor-pointer text-[1.5rem] text-white transition-all duration-300"
+                        ></i>
+                        <i
+                            class="fa-brands fa-square-x-twitter hover:text-tomato cursor-pointer text-[1.5rem] text-white transition-all duration-300"
+                        ></i>
                     </div>
                 </div>
             </div>
